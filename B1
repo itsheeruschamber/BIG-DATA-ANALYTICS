@@ -1,0 +1,33 @@
+ space complexity is O(n) due to the storage of the input string and the copies made for output. The time complexity is O(n) primarily due to reading and printing the input string.
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+
+    string inputString;
+    cout << "Enter a string: ";
+    getline(cin, inputString);
+
+    // Convert the string to a char array using c_str()
+    const char* charArray1 = inputString.c_str();
+
+    // Convert the string to a char array using data()
+    const char* charArray2 = inputString.data();
+
+    // Output the results
+    cout << "Using c_str(): " << charArray1 <<endl;
+    cout << "Using data(): " << charArray2 <<endl;
+    
+    /*To print the characters inside an array*/
+    for (char c : inputString)
+    {
+        cout << c << " ";
+    }
+
+    cout <<endl;
+
+    return 0;
+}
+
+
+
